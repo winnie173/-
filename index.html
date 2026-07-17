@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>睦苏的 AI 超级中枢</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F8F6F0; color: #2D3748; line-height: 1.7; }
+ nav { position: fixed; top: 0; left: 0; right: 0; padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(248,246,240,0.95); border-bottom: 1px solid rgba(10,31,68,0.05); z-index: 1000; }
+ .logo { font-size: 1.5rem; font-weight: 600; color: #0A1F44; text-decoration: none; }
+ .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+ .nav-links a { color: #2D3748; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+ .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 2rem 4rem; background: linear-gradient(180deg, #F8F6F0 0%, #E8E6E0 100%); }
+ .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 600; color: #0A1F44; margin-bottom: 1.5rem; }
+ .hero .subtitle { font-size: 1.25rem; color: #718096; margin-bottom: 1rem; }
+ .hero .tagline { font-size: 1.1rem; color: #0A1F44; font-weight: 500; margin-bottom: 3rem; padding: 1rem 2rem; border: 2px solid #0A1F44; border-radius: 50px; }
+ .cta-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2.5rem; background: #0A1F44; color: #F8F6F0; text-decoration: none; border-radius: 50px; font-weight: 500; }
+ .modules { padding: 6rem 4rem; background: #0A1F44; color: #F8F6F0; }
+ .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 4rem; }
+ .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+ .module-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; transition: all 0.3s ease; }
+ .module-card:hover { background: rgba(255,255,255,0.1); border-color: #4A90D9; transform: translateY(-4px); }
+ .module-number { font-size: 0.85rem; font-weight: 600; color: #4A90D9; margin-bottom: 1rem; }
+ .module-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+ .module-desc { font-size: 0.95rem; color: rgba(248,246,240,0.7); }
+ .roadmap { padding: 6rem 4rem; background: #F8F6F0; }
+ .roadmap .section-title { color: #0A1F44; }
+ .timeline { max-width: 800px; margin: 0 auto; position: relative; }
+ .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: #0A1F44; opacity: 0.2; }
+ .timeline-item { display: flex; margin-bottom: 3rem; position: relative; }
+ .timeline-item:nth-child(odd) { flex-direction: row-reverse; text-align: right; }
+ .timeline-content { width: 45%; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(10,31,68,0.08); }
+ .timeline-week { font-size: 0.85rem; font-weight: 600; color: #4A90D9; margin-bottom: 0.5rem; }
+ .timeline-title { font-size: 1.1rem; font-weight: 600; color: #0A1F44; margin-bottom: 0.5rem; }
+ .timeline-desc { font-size: 0.9rem; color: #718096; }
+ .timeline-dot { position: absolute; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #0A1F44; border-radius: 50%; border: 4px solid #F8F6F0; }
+ footer { padding: 4rem; background: #0A1F44; color: #F8F6F0; text-align: center; }
+ .footer-title { font-size: 1.5rem; margin-bottom: 1rem; }
+ .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; }
+ .footer-links a { color: #F8F6F0; text-decoration: none; opacity: 0.8; }
+ .footer-credit { font-size: 0.85rem; opacity: 0.6; margin-top: 2rem; }
+ @media (max-width: 768px) { .nav-links { display: none; } .modules, .roadmap { padding: 4rem 1.5rem; } .modules-grid { grid-template-columns: 1fr; } .timeline::before { left: 20px; } .timeline-item { flex-direction: column !important; text-align: left !important; padding-left: 50px; } .timeline-content { width: 100%; } .timeline-dot { left: 20px; } }
+ </style>
+</head>
+<body>
+ <nav>
+ <a href="#" class="logo">睦苏</a>
+ <ul class="nav-links">
+ <li><a href="#about">关于</a></li>
+ <li><a href="#modules">系统</a></li>
+ <li><a href="#roadmap">路线图</a></li>
+ <li><a href="#contact">联系</a></li>
+ </ul>
+ </nav>
+
+ <section class="hero" id="about">
+ <h1>睦苏的 AI 超级中枢</h1>
+ <p class="subtitle">学管师 × 副业博主 × AI 重度使用者</p>
+ <p class="tagline">把工作交给 AI，把时间留给自己</p>
+ <a href="#modules" class="cta-button">了解我的系统 ↓</a>
+ </section>
+
+ <section class="modules" id="modules">
+ <h2 class="section-title">9 大 AI 系统模块</h2>
+ <div class="modules-grid">
+ <div class="module-card"><div class="module-number">01</div><h3 class="module-title">专属 AI Agent</h3><p class="module-desc">工作交给它，结果交给我。周报生成、内容创作、学员管理。</p></div>
+ <div class="module-card"><div class="module-number">02</div><h3 class="module-title">AI 第二大脑</h3><p class="module-desc">记忆不靠脑，靠系统。47 篇觉察日记全部结构化存储。</p></div>
+ <div class="module-card"><div class="module-number">03</div><h3 class="module-title">知识库系统</h3><p class="module-desc">所有资料，一个入口。IMA + 金山文档 + 腾讯文档。</p></div>
+ <div class="module-card"><div class="module-number">04</div><h3 class="module-title">AI 工作流</h3><p class="module-desc">重复的事，让 AI 替你跑。定时任务、自动提醒。</p></div>
+ <div class="module-card"><div class="module-number">05</div><h3 class="module-title">AI Skill 系统</h3><p class="module-desc">能力可积累，可复用。26 个 Skill 工具包。</p></div>
+ <div class="module-card"><div class="module-number">06</div><h3 class="module-title">AI 内容生产系统</h3><p class="module-desc">同一内容，多平台分发。小红书、公众号、B站。</p></div>
+ <div class="module-card"><div class="module-number">07</div><h3 class="module-title">AI 学习系统</h3><p class="module-desc">输入 → 整理 → 内化。觉察日记自动归档。</p></div>
+ <div class="module-card"><div class="module-number">08</div><h3 class="module-title">AI 管理系统</h3><p class="module-desc">学员、任务、数据全覆盖。178 名学员周反馈批量生成。</p></div>
+ <div class="module-card"><div class="module-number">09</div><h3 class="module-title">持续升级的 AI 操作系统</h3><p class="module-desc">今天比昨天更聪明。每周迭代，每月复盘。</p></div>
+ </div>
+ </section>
+
+ <section class="roadmap" id="roadmap">
+ <h2 class="section-title">4 周落地路线图</h2>
+ <div class="timeline">
+ <div class="timeline-item"><div class="timeline-content"><div class="timeline-week">Week 1</div><h3 class="timeline-title">建基底</h3><p class="timeline-desc">第二大脑 + 知识库。整理 47 篇觉察日记。</p></div><div class="timeline-dot"></div></div>
+ <div class="timeline-item"><div class="timeline-content"><div class="timeline-week">Week 2</div><h3 class="timeline-title">建 Agent</h3><p class="timeline-desc">专属助手跑通 5 个真实任务。周报、小红书、学员分析。</p></div><div class="timeline-dot"></div></div>
+ <div class="timeline-item"><div class="timeline-content"><div class="timeline-week">Week 3</div><h3 class="timeline-title">建工作流</h3><p class="timeline-desc">AI 接管 5 件最烦的事。定时提醒、自动归档。</p></div><div class="timeline-dot"></div></div>
+ <div class="timeline-item"><div class="timeline-content"><div class="timeline-week">Week 4</div><h3 class="timeline-title">建 Skill 资产</h3><p class="t
+...(truncated)...
